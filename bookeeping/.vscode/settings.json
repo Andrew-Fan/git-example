@@ -1,4 +1,0 @@
-{
-    "appService.defaultWebAppToDeploy": "/subscriptions/a5a0c62d-c5e5-483b-b6a6-9dacbef35e32/resourceGroups/WebApp/providers/Microsoft.Web/sites/webBookeeping",
-    "appService.deploySubpath": "publish"
-}
