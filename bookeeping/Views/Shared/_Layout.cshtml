@@ -1,0 +1,56 @@
+﻿@inject SignInManager<ApplicationUser> signInManager
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            @ViewData["Title"]
+        </title>
+        <style>
+            ul {
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                list-style-type: none;
+                border: 1px solid #e7e7e7;
+                background-color: #f3f3f3;
+            }
+
+            li {
+                float: left;
+                font-size: 150%;
+            }
+
+            .content {
+                margin-left: 80px;
+                margin-right: 80px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Bookeeping!</h1>
+        <br>
+
+        <ul>
+            <li>Home</li>
+            <li><a asp-controller="Journal" asp-action="Details">Record</a></li>
+            <li>About</li>
+
+            @if (signInManager.IsSignedIn(User))
+            {
+                <form method="post" asp-controller="Account" asp-action="LogOut">
+                    <button style="float:right">登出</button>
+                </form>
+            }
+            else
+            {
+                <button style="float:right"><a asp-controller="Account" asp-action="LogIn">登入</a></button>
+                <button style="float:right"><a asp-controller="Account" asp-action="Register">註冊</a></button>
+            }
+        </ul>
+
+        <div>
+            @RenderBody()
+        </div>
+    </body>
+</html>

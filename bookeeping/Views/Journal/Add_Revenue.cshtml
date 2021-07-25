@@ -1,0 +1,27 @@
+@model Journal
+@{
+    ViewData["Title"] = "Add Rev";
+}
+
+<br>
+<div class="content">
+    <form method="post">
+        <input asp-for="UserID" value="@Model.UserID" type="hidden">
+        <input asp-for="Date" value="@DateTime.Now" type="date">
+        <input asp-for="Type" value="0" type="hidden">
+        <label asp-for="Category">種類</label>
+        <select asp-for="Category">
+            <option value="薪水">薪水</option>
+            <option value="獎金">獎金</option>
+            <option value="投資">投資</option>
+            <option value="其他">其他</option>
+        </select>
+        <label asp-for="AccountingTitle">項目</label>
+        <input asp-for="AccountingTitle">
+        <label asp-for="Description">描述</label>
+        <input asp-for="Description">
+        <label asp-for="Amount">金額</label>
+        <input asp-for="Amount" type="number">
+        <input type="submit" value="新增">
+    </form>
+</div>

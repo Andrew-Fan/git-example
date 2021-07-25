@@ -1,0 +1,42 @@
+@model Budget
+@{
+    ViewData["Title"] = "Bubget Page";
+}
+
+<br>
+<div class="content">
+    <table>
+        <tr>
+            <th>項目</th>
+            <th>金額</th>
+        </tr>
+        <tr>
+            <td>@nameof(Model.Food)</td>
+            <td>@Model.Food</td>
+        </tr>
+        <tr>
+            <td>@nameof(Model.Transport)</td>
+            <td>@Model.Transport</td>
+        </tr>
+        <tr>
+            <td>@nameof(Model.Shopping)</td>
+            <td>@Model.Shopping</td>
+        </tr>
+        <tr>
+            <td>@nameof(Model.Entertainment)</td>
+            <td>@Model.Entertainment</td>
+        </tr>
+        <tr>
+            <td>@nameof(Model.Personal)</td>
+            <td>@Model.Personal</td>
+        </tr>
+        <tr>
+            <td>@nameof(Model.Learning)</td>
+            <td>@Model.Learning</td>
+        </tr>
+        <tr>
+            <td>@nameof(Model.Other)</td>
+            <td>@Model.Other</td>
+        </tr>
+    </table>
+</div>

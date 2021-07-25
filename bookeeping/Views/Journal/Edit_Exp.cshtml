@@ -1,0 +1,31 @@
+@model Journal
+@{
+    ViewData["Title"] = "Add Exp";
+}
+
+<br>
+<div class="content">
+    <form method="post">
+        <input asp-for="UserID" value="@Model.UserID" type="hidden">
+        <input asp-for="JournalID" value="@Model.JournalID" type="hidden">
+        <input asp-for="Date" value="@Model.Date" type="date">
+        <input asp-for="Type" value="1" type="hidden">
+        <label asp-for="Category">種類</label>
+        <select asp-for="Category">
+            <option value="食物">食物</option>
+            <option value="交通">交通</option>
+            <option value="娛樂">娛樂</option>
+            <option value="購物">購物</option>
+            <option value="個人雜支">個人雜支</option>
+            <option value="學習">學習</option>
+            <option value="其他">其他</option>
+        </select>
+        <label asp-for="AccountingTitle">項目</label>
+        <input asp-for="AccountingTitle" value="@Model.AccountingTitle">
+        <label asp-for="Description">描述</label>
+        <input asp-for="Description" value="@Model.Description">
+        <label asp-for="Amount">金額</label>
+        <input asp-for="Amount" type="number" value="@Model.Amount">
+        <input type="submit" value="修改">
+    </form>
+</div>

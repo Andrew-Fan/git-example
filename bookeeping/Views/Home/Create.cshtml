@@ -1,0 +1,17 @@
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+<br>
+<form method="post" asp-action="Create">
+    <label for="Name">Name:</label>
+    <input type="text" id="Name" name="Name">
+    <label for="Password">Password:</label>
+    <input type="text" id="Password" name="Password">
+    <label for="Mail">E-mail:</label>
+    <input type="text" id="Mail" name="E_mail">
+    <label for="Balance">Initial Balance:</label>
+    <input type="number" id="Balance" name="BalanceAmount_Big">
+    <input type="submit" value="Create">
+</form>
